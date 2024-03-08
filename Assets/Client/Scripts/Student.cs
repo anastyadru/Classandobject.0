@@ -28,7 +28,6 @@ public class Student : Human
     {
         base.Edit();
         var fieldToEdit = int.Parse(Console.ReadLine());
-            
         switch (fieldToEdit)
         {
             case 1:
@@ -59,5 +58,4 @@ public class Student : Human
         Debug.Log($"Курс: {Course}");
         Debug.Log($"Группа: {Group}");
     }
-
 }

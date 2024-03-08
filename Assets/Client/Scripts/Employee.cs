@@ -29,7 +29,6 @@ public class Employee : Human
     {
         base.Edit();
         var fieldToEdit = int.Parse(Console.ReadLine());
-            
         switch (fieldToEdit)
         {
             case 1:
@@ -60,5 +59,4 @@ public class Employee : Human
         Debug.Log($"Зарплата: {Salary}");
         Debug.Log($"Опыт работы: {Experience}");
     }
-
 }

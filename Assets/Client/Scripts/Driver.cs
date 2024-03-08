@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public sealed class Driver : Employee
 {
     private string Brand { get; set; }
-        
+    
     private string Model { get; set; }
 
     public Driver(string surname, string name, string patronymic, DateTime  birth, string company, int salary, int experience, string brand, string model): base(surname, name, patronymic, birth, company, salary, experience)
@@ -25,7 +25,6 @@ public sealed class Driver : Employee
     {
         base.Edit();
         var fieldToEdit = int.Parse(Console.ReadLine());
-            
         switch (fieldToEdit)
         {
             case 1:
@@ -50,5 +49,4 @@ public sealed class Driver : Employee
         Debug.Log($"Бренд: {Brand}");
         Debug.Log($"Модель: {Model}");
     }
-
 }

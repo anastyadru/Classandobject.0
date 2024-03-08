@@ -27,6 +27,7 @@ public class Human : MonoBehaviour
         var age = DateTime.Now.Year - BirthDate.Year;
         if (DateTime.Now.Month < BirthDate.Month || (DateTime.Now.Month == BirthDate.Month && DateTime.Now.Day < BirthDate.Day)) 
             age--;
+        
         return age;
     }
 
@@ -38,7 +39,6 @@ public class Human : MonoBehaviour
     public virtual void Edit()
     {
         var fieldToEdit = int.Parse(Console.ReadLine());
-            
         switch (fieldToEdit)
         {
             case 1:
@@ -72,5 +72,4 @@ public class Human : MonoBehaviour
         Debug.Log($"ФИО: {Surname} {Name} {Patronymic}");
         Debug.Log($"Возраст: {CalculateAge()}");
     }
-    
 }

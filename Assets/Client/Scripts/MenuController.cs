@@ -70,7 +70,6 @@ public class MenuController : MonoBehaviour
 
             Debug.Log("Данные студента добавлены:\n" + student.Print());
         }
-        
         else if (personType == 1)
         {
             Debug.Log("Введите название компании:");
@@ -87,7 +86,6 @@ public class MenuController : MonoBehaviour
             
             Debug.Log("Данные работника добавлены:\n" + employee.Print());
         }
-        
         else if (personType == 2)
         {
             Debug.Log("Введите название компании:");
@@ -114,19 +112,19 @@ public class MenuController : MonoBehaviour
         Application.Quit();
     }
 
-	void OnStudentButtonClicked()
+    public void OnStudentButtonClicked()
 	{
     	Debug.Log("Введите информацию о студенте:");
     	AddPerson();
 	}
 
-	void OnEmployeeButtonClicked()
+    public void OnEmployeeButtonClicked()
 	{
     	Debug.Log("Введите информацию о работнике:");
     	AddPerson();
 	}
 
-	void OnDriverButtonClicked()
+    public void OnDriverButtonClicked()
 	{
     	Debug.Log("Введите информацию о водителе:");
     	AddPerson();
@@ -136,15 +134,12 @@ public class MenuController : MonoBehaviour
     {
         Debug.Log("Введите фамилию человека, данные которого хотите изменить:");
         var surnameToEdit = Console.ReadLine();
-                    
         var personToEdit = people.Find(p => p.Surname == surnameToEdit);
-
         if (personToEdit != null)
         {
         	personToEdit.Edit();
         	Debug.Log("Изменения сохранены");
         }
-                    
         else
         {
         	Debug.Log("Человек с такой фамилией не найден");
@@ -157,15 +152,12 @@ public class MenuController : MonoBehaviour
     {
         Debug.Log("Введите фамилию человека, данные которого хотите удалить:");
         var surnameToDelete = Console.ReadLine();
-                    
         var personToDelete = people.Find(p => p.Surname == surnameToDelete);
-
         if (personToDelete != null)
         {
         	people.Remove(personToDelete);
         	Debug.Log("Информация о человеке удалена");
         }
-        
         else
         {
         	Debug.Log("Человек с такой фамилией не найден");
@@ -173,5 +165,4 @@ public class MenuController : MonoBehaviour
         
         Application.Quit();
     }
-
 }
